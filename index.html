@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drumkit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(./Audio/background.jpg);
+            background-position: center;
+            background-size: 100%;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 80px;
+            letter-spacing: 10px;
+        }
+
+        .description {
+            color: rgb(214, 141, 45);
+            font-weight: 700;
+            font-size: 30px;
+            margin: 40px 0;
+        }
+
+        .list-drum {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            width: 80%;
+            margin: 100px auto;
+        }
+
+        .item-drum {
+            background: rgba(0, 0, 0, .5);
+            border: 2px solid #000;
+            padding: 20px 40px;
+        }
+
+        .item-drum__key {
+            color: #fff;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .item-drum__name {
+            color: rgb(214, 141, 45);
+        }
+
+        .list-audio {
+            opacity: 0;
+        }
+        @keyframes animate{
+            from{
+                transform:scale(1)
+            }
+            to{
+                transform:scale(1.15);
+                border:3px solid rgb(214, 141, 45);
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">
+            DRUMKIT
+        </h1>
+        <p class="description">
+            Type the keyboard letters shown below!
+        </p>
+        <ul class="list-drum">
+            <li class="item-drum" data-key="65">
+                <p class="item-drum__key">
+                    A
+                </p>
+                <span class="item-drum__name">
+                    clap
+                </span>
+            </li>
+            <li class="item-drum"data-key="83">
+                <p class="item-drum__key">
+                    S
+                </p>
+                <span class="item-drum__name">
+                    hithat
+                </span>
+            </li>
+            <li class="item-drum" data-key="68">
+                <p class="item-drum__key">
+                    D
+                </p>
+                <span class="item-drum__name">
+                    kick
+                </span>
+            </li>
+            <li class="item-drum" data-key="70">
+                <p class="item-drum__key">
+                    F
+                </p>
+                <span class="item-drum__name">
+                    openhat
+                </span>
+            </li>
+            <li class="item-drum" data-key="71">
+                <p class="item-drum__key">
+                    G
+                </p>
+                <span class="item-drum__name">
+                    boom
+                </span>
+            </li>
+            <li class="item-drum" data-key="72">
+                <p class="item-drum__key">
+                    H
+                </p>
+                <span class="item-drum__name">
+                    ride
+                </span>
+            </li>
+            <li class="item-drum" data-key="74">
+                <p class="item-drum__key">
+                    J
+                </p>
+                <span class="item-drum__name">
+                    snare
+                </span>
+            </li>
+        </ul>
+        <div class="list-audio">
+            <audio controls data-key=65 class='audio'>
+                <source src='./Audio/al-pacho-bass-808.wav'>
+               
+            </audio>
+            <audio controls data-key=83 class='audio'>
+                <source src='./Audio/applause.mp3'>
+        
+            </audio>
+            <audio controls data-key=68 class='audio'>
+               
+                <source src='./Audio/closed-hi-hat-dry-thin_C_minor.wav'>
+               
+            </audio>
+            <audio controls data-key=70 class='audio'>
+               
+                <source src='./Audio/dirty-hat-percussion-2.wav'>
+               
+            </audio>
+            <audio controls data-key=71 class='audio'>
+               
+                <source src='./Audio/dirty-hat-percussion.wav'>
+             
+            <audio controls data-key=72 class='audio'>
+
+                <source src='./Audio/old-school-hip-hop-drums-short-hi-hat.wav'>
+            </audio>
+            <audio controls data-key=74 class='audio'>
+                <source src='./Audio/solitary-hat.wav'> 
+           </audio>
+        </div>
+    </div>
+    <script src='index.js'></script>
+</body>
+
+</html>
